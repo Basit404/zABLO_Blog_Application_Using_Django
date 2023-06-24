@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock title %}
+{% block blogactive %}active{% endblock blogactive %}
+{% load static %}
+
+{% block body %}
+<!-- template for blogs page -->
+<div class="container my-4 text-center">
+    <h1 class="mb-2" style="color: white; background-color: black; font-style: italic; display: inline-block;">Welcome
+        to zABLO_ &nbsp;&nbsp;Your Own Gaming Realm!</h1>
+    <br>
+    <h3 class="my-4" style="color: white; background-color: black; font-style: italic; display: inline-block;">The Main Blogs Portion of zABLO_:</h3>
+    {% for blog in blogs %}
+
+    <div class="media">
+        <img src="/media/{{blog.image}}" class="mr-3 img-fluid" alt="..." style="width: 900px; height: 400px;">
+        <div class="media-body">
+            <h3 class="mt-2"><a href="/blogpost/{{blog.slug}}" class="text-dark"
+                    style="text-decoration: none;">{{blog.title}}</a></h3>
+
+            <div>
+                {{blog.content |truncatewords:60 | safe}}
+            </div>
+            <a href="/blogpost/{{blog.slug}}" class="btn btn-outline-primary mb-4 btn-sm">Read More..</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="container my-5">
+    <!-- previous button -->
+    {% if prev %}
+    <button class="btn btn-dark"><a href="/blog?page={{prev}}" class="text-light" style="text-decoration: none; float: left;">&laquo;
+            Previous</a></button>
+    {% else %}
+    <button class="btn btn-dark"><a href="#" class="text-light" style="text-decoration: none;">&laquo;
+            Previous</a></button>
+    {% endif %}
+
+
+    <!-- next button -->
+    {% if nxt %}
+    <button class="btn btn-dark" style="float: right;"><a href="/blog?page={{nxt}}" class="text-light"
+            style="text-decoration: none;">Next &raquo;</a></button>
+    {% else %}
+    <button class="btn btn-dark" style="float: right;"><a href="#" class="text-light"
+            style="text-decoration: none;">Next &raquo;</a>
+        {% endif %}
+</div>
+{% endblock body %}

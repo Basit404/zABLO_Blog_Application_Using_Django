@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock title %}
+{% block blogactive %}active{% endblock blogactive %}
+{% load static %}
+
+{% block body %}
+<!-- template for specific post -->
+<div class="container my-4">
+    <h1 class="mb-5">The zABLO_ &nbsp;&nbsp;Presents:</h1>
+
+    <h2 class="mb-2"><i>{{blog.title}}</i></h2>
+    <div class="my-3">
+        <div class="media">
+            <img src="/media/{{blog.image}}" class="mr-3 img-fluid" alt="..." style="width: 1300px; height: 450px;">
+            <div class="media-body">
+                <div class="mt-3 text-center">
+                    {{blog.content | safe}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

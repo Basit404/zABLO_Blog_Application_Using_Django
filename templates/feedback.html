@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Feedback{% endblock title %}
+{% block feedbackactive %}active{% endblock feedbackactive %}
+
+{% block body %}
+
+<!-- feedback text -->
+<div class="my-4 text-center">
+    <h2 style="color: white; background-color: black; font-style: italic; display: inline-block;">FeedBack</h2>
+</div>
+
+<!-- feedback form -->
+<div class="container my-4">
+    <form action="/feedback/" method="post">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="name" class=""><b><i>Name:</i></b></label>
+            <input type="text" class="form-control form-control-lg" id="name" name="name"
+                placeholder="Enter your full name:" required>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b><i>Email address:</i></b></label>
+            <input type="email" class="form-control form-control-lg" id="exampleFormControlInput1" name="email"
+                placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1"><b><i>Phone Number:</i></b></label>
+            <input type="phone" class="form-control form-control-lg" id="phone" name="phone"
+                placeholder="Enter your phone number:" required>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"><b><i>Explain Your Concern:</i></b></label>
+            <textarea class="form-control form-control-lg" id="desc" name="desc" rows="3" required></textarea>
+        </div>
+        <div class="container text-center">
+            <button type="submit" class="btn btn-outline-primary btn-lg my-3">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+{% endblock body %}

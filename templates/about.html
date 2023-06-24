@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block aboutactive %}active{% endblock aboutactive %}
+{% load static %}
+{% block body %}
+
+<!-- about us -->
+<div class="jumbotron-fluid" style="background-color: #333;
+color: #fff; padding-bottom: 1px;">
+    <div class="container text-center">
+        <h1 class="display-4">Welcome to zABLO</h1>
+        <p class="lead">Your ultimate gaming destination!</p>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 style="color: white; background-color: black; display: inline-block;">About Us</h2>
+            <p>
+                Welcome to zABLO, your ultimate gaming destination! If you're passionate about gaming and crave the
+                latest news, insightful articles, and captivating content about the gaming world, then you've come
+                to the right place. At zABLO, we are dedicated to immersing you in a virtual realm where gaming goes
+                beyond being just a hobby—it becomes a true passion. Our mission is to build a vibrant community of
+                avid gamers who share in the excitement, artistry, and technological marvels of gaming. Join us on
+                this exhilarating journey as we unlock the limitless potential and endless thrills that gaming has
+                to offer.
+            </p>
+            <p>
+                Gaming is no longer confined to a solitary activity. It has evolved into a thriving culture that
+                brings people together, sparks creativity, and fosters connections. At zABLO, we understand the
+                significance of this cultural shift and aim to celebrate gaming as both an art form and a
+                technological marvel. Our dedicated team of writers and contributors are passionate gamers
+                themselves, equipped with the knowledge and expertise to deliver engaging content that resonates
+                with our community.
+            </p>
+            <p>
+                Stay up-to-date with the latest gaming news, as we bring you insights into the ever-evolving
+                landscape of the gaming industry. From exciting game releases and updates to cutting-edge
+                technologies and innovations, we've got you covered. Our articles delve into the heart of the gaming
+                world, providing in-depth analysis, reviews, and behind-the-scenes glimpses into the development
+                process. Whether you're a casual player, a competitive gamer, or a seasoned veteran, our content
+                caters to all levels of gaming enthusiasts.
+            </p>
+            <p>
+                Immerse yourself in our captivating articles that explore various genres, platforms, and gaming
+                experiences. Discover hidden gems that deserve recognition, embark on virtual adventures through
+                immersive storytelling, and gain insights into the minds of game developers who bring these worlds
+                to life. We go beyond the surface to uncover the artistry, narratives, and gameplay mechanics that
+                make each game unique. Our aim is to provide you with a deeper understanding and appreciation of the
+                gaming medium.
+            </p>
+            <p>
+                But zABLO is more than just a platform for consuming content; it's a community of passionate gamers
+                united by their love for games. Join our community forums, where you can connect with like-minded
+                individuals, discuss your favorite games, share tips and strategies, and participate in lively
+                debates. Engage with our writers and contribute your own thoughts and experiences. Together, we can
+                create a thriving hub where gaming enthusiasts can connect, collaborate, and inspire each other.
+            </p>
+            <p>
+                So, whether you're seeking the latest updates on your favorite game, want to explore new gaming
+                horizons, or simply want to immerse yourself in the world of gaming culture, zABLO is your go-to
+                destination. Join us as we celebrate the art, technology, and excitement of gaming. Level up your
+                gaming experience and unlock a world of endless possibilities with zABLO.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'img/about.jpg' %}" alt="zABLO" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+{% endblock body %}
